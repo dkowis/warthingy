@@ -25,12 +25,12 @@ class FilterMapper extends Filter {
   val servlet = new WSGIServlet
 
   override def init(config : FilterConfig) : Unit = {
-    //servlet.init(new ConfigMapper(config))
+    servlet.init(new ConfigMapper(config))
   }
 
   override def doFilter (req : ServletRequest, resp : ServletResponse, chain : FilterChain) : Unit = {
     servlet.service (req, resp)
-    chain.doFilter(req, resp)
+    //chain.doFilter(req, resp)
   }
 
   override def destroy : Unit = {

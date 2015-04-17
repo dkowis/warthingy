@@ -15,6 +15,10 @@
     <filter>
         <filter-name>FilterMapper</filter-name>
         <filter-class>com.rackspace.hax.FilterMapper</filter-class>
+        <init-param>
+            <param-name>wsgi.handler</param-name>
+            <param-value>hellowsgi.simple_app</param-value>
+        </init-param>
     </filter>
     <filter-mapping>
         <filter-name>FilterMapper</filter-name>
